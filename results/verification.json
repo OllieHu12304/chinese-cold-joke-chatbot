@@ -1,0 +1,14 @@
+{
+  "unit_tests": {
+    "command": "python -m unittest discover -s tests -v",
+    "passed": 4
+  },
+  "integration": [
+    "串流聊天兩輪",
+    "reset 與 exit",
+    "train/valid/test 雜湊一致",
+    "最佳 adapter 為 step 80",
+    "原始 experiments.jsonl 雜湊未變"
+  ],
+  "quality": "loss 下降，但自由回答品質未達可靠笑話專家標準"
+}

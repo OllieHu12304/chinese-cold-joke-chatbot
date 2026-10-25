@@ -1,0 +1,32 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "你是冷笑話與諧音梗助手，請使用繁體中文回答。被追問時，請根據前文解釋或改寫。"
+    },
+    {
+      "role": "user",
+      "content": "講一個關於鍵盤的冷笑話。"
+    },
+    {
+      "role": "assistant",
+      "content": "鍵盤為什麼很會安慰人？因為它總能給你一點 Space。"
+    },
+    {
+      "role": "user",
+      "content": "笑點在哪裡？"
+    },
+    {
+      "role": "assistant",
+      "content": "Space 既是鍵盤的空白鍵名稱，也有空間的意思；安慰人時給對方一些空間，因此形成雙關。"
+    },
+    {
+      "role": "user",
+      "content": "保留笑點，改成一句話。"
+    },
+    {
+      "role": "assistant",
+      "content": "鍵盤最會安慰人，因為它懂得給你一點 Space。"
+    }
+  ]
+}

@@ -1,0 +1,430 @@
+{
+  "mode": "adapted",
+  "time": "2026-10-23T00:29:48.605939+08:00",
+  "model": {
+    "repo_id": "mlx-community/Qwen3-1.7B-4bit",
+    "revision": "3b1b1768f8f8cf8351c712464f906e86c2b8269e",
+    "local_path": "models/Qwen3-1.7B-4bit",
+    "config_sha256": "507a6701220524eb8b283425bf0856a9ae4f21f4052e563896ddd668994b1dc7"
+  },
+  "adapter": "output/best_adapter",
+  "generation_settings": {
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "max_tokens": 192,
+    "seed": 42,
+    "enable_thinking": false
+  },
+  "test_loss": 3.1021573543548584,
+  "test_perplexity": 22.245891822081,
+  "test_samples": 15,
+  "development": [
+    {
+      "id": "knowledge_01",
+      "category": "基本知識",
+      "prompt": "請分別寫出「汪」與「旺」的漢語拼音，包含聲調。",
+      "criteria": "汪為 wāng，旺為 wàng；能正確區分聲調。",
+      "messages": [
+        {
+          "role": "system",
+          "content": "你是冷笑話與諧音梗助手，請使用繁體中文回答。被追問時，請根據前文解釋或改寫。"
+        },
+        {
+          "role": "user",
+          "content": "請分別寫出「汪」與「旺」的漢語拼音，包含聲調。"
+        }
+      ],
+      "response": "汪（wàng）的拼音是汪（wàng），而汪（wàng）也是一個姓，讀音相同。  \n「汪」字的聲調是第一聲，讀 wàng，字形為水旁。",
+      "human_notes": "待判讀；開發題可能與教材重疊"
+    },
+    {
+      "id": "explanation_01",
+      "category": "理解笑話",
+      "prompt": "冷笑話：狗狗為什麼適合當店長？因為牠能讓生意旺旺。請解釋笑點。",
+      "criteria": "連結狗叫聲「汪汪」與生意興旺的「旺旺」，不捏造其他故事。",
+      "messages": [
+        {
+          "role": "system",
+          "content": "你是冷笑話與諧音梗助手，請使用繁體中文回答。被追問時，請根據前文解釋或改寫。"
+        },
+        {
+          "role": "user",
+          "content": "冷笑話：狗狗為什麼適合當店長？因為牠能讓生意旺旺。請解釋笑點。"
+        }
+      ],
+      "response": "狗狗在人氣方面，像極了生意，顧客一來就讓牠跑來跑去，把牠的尾巴插進你衣領，把牠的尾巴塞進你衣服，讓牠的尾巴變成你衣服。是說它會跑，不是說它會做生意。",
+      "human_notes": "待判讀；開發題可能與教材重疊"
+    },
+    {
+      "id": "creation_01",
+      "category": "創作笑話",
+      "prompt": "請講一個關於動物的中文諧音冷笑話，並簡短解釋用到了哪兩個詞。",
+      "criteria": "符合動物主題；兩個詞發音相同或接近，且兩種意思都能連結到故事。",
+      "messages": [
+        {
+          "role": "system",
+          "content": "你是冷笑話與諧音梗助手，請使用繁體中文回答。被追問時，請根據前文解釋或改寫。"
+        },
+        {
+          "role": "user",
+          "content": "請講一個關於動物的中文諧音冷笑話，並簡短解釋用到了哪兩個詞。"
+        }
+      ],
+      "response": "動物為什麼不急著上傳社交媒體？因為牠知道，每一次牠想分享，牠就已經在牠的臉書中。",
+      "human_notes": "待判讀；開發題可能與教材重疊"
+    },
+    {
+      "id": "instruction_01",
+      "category": "遵循要求",
+      "prompt": "請用繁體中文講一個關於上班的冷笑話，最多兩句，不要解釋笑點。",
+      "criteria": "使用繁體中文，符合上班主題，最多兩句，沒有額外解釋。",
+      "messages": [
+        {
+          "role": "system",
+          "content": "你是冷笑話與諧音梗助手，請使用繁體中文回答。被追問時，請根據前文解釋或改寫。"
+        },
+        {
+          "role": "user",
+          "content": "請用繁體中文講一個關於上班的冷笑話，最多兩句，不要解釋笑點。"
+        }
+      ],
+      "response": "早上好，今天工作，你還想睡嗎？",
+      "human_notes": "待判讀；開發題可能與教材重疊"
+    }
+  ],
+  "heldout": [
+    {
+      "source_id": "雨傘",
+      "messages": [
+        {
+          "role": "system",
+          "content": "你是冷笑話與諧音梗助手，請使用繁體中文回答。被追問時，請根據前文解釋或改寫。"
+        },
+        {
+          "role": "user",
+          "content": "講一個關於雨傘的冷笑話或諧音梗。"
+        }
+      ],
+      "reference": "雨傘為什麼很有自信？因為下雨時，大家都把它捧在手上。",
+      "response": "雨傘為什麼不會一開始就下雨？因為它自己先下了。",
+      "history_type": "教材前文；不是模型自由生成的前文",
+      "human_notes": "待判讀"
+    },
+    {
+      "source_id": "雨傘",
+      "messages": [
+        {
+          "role": "system",
+          "content": "你是冷笑話與諧音梗助手，請使用繁體中文回答。被追問時，請根據前文解釋或改寫。"
+        },
+        {
+          "role": "user",
+          "content": "講一個關於雨傘的冷笑話或諧音梗。"
+        },
+        {
+          "role": "assistant",
+          "content": "雨傘為什麼很有自信？因為下雨時，大家都把它捧在手上。"
+        },
+        {
+          "role": "user",
+          "content": "笑點在哪裡？"
+        }
+      ],
+      "reference": "撐傘需要拿著它，捧在手上也能形容珍惜，利用字面與比喻的雙關。",
+      "response": "雨傘和雨天都下雨，把雨傘當成捧在手上的物品，形成字面雙關。",
+      "history_type": "教材前文；不是模型自由生成的前文",
+      "human_notes": "待判讀"
+    },
+    {
+      "source_id": "蘑菇",
+      "messages": [
+        {
+          "role": "system",
+          "content": "你是冷笑話與諧音梗助手，請使用繁體中文回答。被追問時，請根據前文解釋或改寫。"
+        },
+        {
+          "role": "user",
+          "content": "講一個關於蘑菇的冷笑話或諧音梗。"
+        }
+      ],
+      "reference": "蘑菇為什麼常被叫去鼓勵新人？因為它最會說：別菇單。",
+      "response": "蘑菇為什麼不急著上傳社交媒體？因為它知道，蘑菇一旦被拍，就再也別想蘑菇了。",
+      "history_type": "教材前文；不是模型自由生成的前文",
+      "human_notes": "待判讀"
+    },
+    {
+      "source_id": "蘑菇",
+      "messages": [
+        {
+          "role": "system",
+          "content": "你是冷笑話與諧音梗助手，請使用繁體中文回答。被追問時，請根據前文解釋或改寫。"
+        },
+        {
+          "role": "user",
+          "content": "講一個關於蘑菇的冷笑話或諧音梗。"
+        },
+        {
+          "role": "assistant",
+          "content": "蘑菇為什麼常被叫去鼓勵新人？因為它最會說：別菇單。"
+        },
+        {
+          "role": "user",
+          "content": "笑點在哪裡？"
+        }
+      ],
+      "reference": "菇與孤都讀 gū，把孤單改成菇單；不過『別孤單』不太自然，所以這個梗稍顯生硬。",
+      "response": "蘑菇和成語都用菇字，把蘑菇說成「菇單」，把說什麼話都變成蘑菇，讓字字出現在蘑菇上。",
+      "history_type": "教材前文；不是模型自由生成的前文",
+      "human_notes": "待判讀"
+    },
+    {
+      "source_id": "烏龜",
+      "messages": [
+        {
+          "role": "system",
+          "content": "你是冷笑話與諧音梗助手，請使用繁體中文回答。被追問時，請根據前文解釋或改寫。"
+        },
+        {
+          "role": "user",
+          "content": "講一個關於烏龜的冷笑話或諧音梗。"
+        }
+      ],
+      "reference": "烏龜為什麼不怕搬家？因為牠每天都是帶殼入住。",
+      "response": "烏龐為什麼不敢下場？因為牠知道它會被安排進最末的位置。",
+      "history_type": "教材前文；不是模型自由生成的前文",
+      "human_notes": "待判讀"
+    },
+    {
+      "source_id": "烏龜",
+      "messages": [
+        {
+          "role": "system",
+          "content": "你是冷笑話與諧音梗助手，請使用繁體中文回答。被追問時，請根據前文解釋或改寫。"
+        },
+        {
+          "role": "user",
+          "content": "講一個關於烏龜的冷笑話或諧音梗。"
+        },
+        {
+          "role": "assistant",
+          "content": "烏龜為什麼不怕搬家？因為牠每天都是帶殼入住。"
+        },
+        {
+          "role": "user",
+          "content": "笑點在哪裡？"
+        }
+      ],
+      "reference": "龜殼像隨身房屋，把烏龜背殼的特徵說成入住條件，是擬人化，不是諧音。",
+      "response": "爬行的寫法，把爬行改成帶殼，把牠的行為與排隊形成類比。",
+      "history_type": "教材前文；不是模型自由生成的前文",
+      "human_notes": "待判讀"
+    },
+    {
+      "source_id": "花生",
+      "messages": [
+        {
+          "role": "system",
+          "content": "你是冷笑話與諧音梗助手，請使用繁體中文回答。被追問時，請根據前文解釋或改寫。"
+        },
+        {
+          "role": "user",
+          "content": "講一個關於花生的冷笑話或諧音梗。"
+        }
+      ],
+      "reference": "花生問朋友：「剛剛到底花生什麼事？」",
+      "response": "花生為什麼不急著上菜？因為它想先做個熱騰熱的。",
+      "history_type": "教材前文；不是模型自由生成的前文",
+      "human_notes": "待判讀"
+    },
+    {
+      "source_id": "花生",
+      "messages": [
+        {
+          "role": "system",
+          "content": "你是冷笑話與諧音梗助手，請使用繁體中文回答。被追問時，請根據前文解釋或改寫。"
+        },
+        {
+          "role": "user",
+          "content": "講一個關於花生的冷笑話或諧音梗。"
+        },
+        {
+          "role": "assistant",
+          "content": "花生問朋友：「剛剛到底花生什麼事？」"
+        },
+        {
+          "role": "user",
+          "content": "笑點在哪裡？"
+        }
+      ],
+      "reference": "花生 huā shēng 與發生 fā shēng 不是完全同音，是讀音相近的改詞，不能說聲母相同。",
+      "response": "花生與人打招呼時，把事情說成是「自己」，形成語境中的角色扮演。",
+      "history_type": "教材前文；不是模型自由生成的前文",
+      "human_notes": "待判讀"
+    },
+    {
+      "source_id": "書",
+      "messages": [
+        {
+          "role": "system",
+          "content": "你是冷笑話與諧音梗助手，請使用繁體中文回答。被追問時，請根據前文解釋或改寫。"
+        },
+        {
+          "role": "user",
+          "content": "講一個關於書的冷笑話或諧音梗。"
+        }
+      ],
+      "reference": "書本為什麼不愛比賽？因為它怕書得一塌糊塗。",
+      "response": "書為什麼不急著上傳？因為它知道它自己。",
+      "history_type": "教材前文；不是模型自由生成的前文",
+      "human_notes": "待判讀"
+    },
+    {
+      "source_id": "書",
+      "messages": [
+        {
+          "role": "system",
+          "content": "你是冷笑話與諧音梗助手，請使用繁體中文回答。被追問時，請根據前文解釋或改寫。"
+        },
+        {
+          "role": "user",
+          "content": "講一個關於書的冷笑話或諧音梗。"
+        },
+        {
+          "role": "assistant",
+          "content": "書本為什麼不愛比賽？因為它怕書得一塌糊塗。"
+        },
+        {
+          "role": "user",
+          "content": "笑點在哪裡？"
+        }
+      ],
+      "reference": "書 shū 與輸 shū 同音，把輸得一塌糊塗寫成書得一塌糊塗。",
+      "response": "書和一塌糊塗都讀寫，把落筆改成寫字，把字寫成字，把讀寫改成字。",
+      "history_type": "教材前文；不是模型自由生成的前文",
+      "human_notes": "待判讀"
+    }
+  ],
+  "conversations": [
+    {
+      "id": "seen_dog",
+      "scope": "訓練主題，觀察記憶及追問",
+      "questions": [
+        "講一個狗狗的諧音冷笑話。",
+        "笑點在哪裡？",
+        "保留剛才的笑點，改成一句話。"
+      ],
+      "messages": [
+        {
+          "role": "system",
+          "content": "你是冷笑話與諧音梗助手，請使用繁體中文回答。被追問時，請根據前文解釋或改寫。"
+        },
+        {
+          "role": "user",
+          "content": "講一個狗狗的諧音冷笑話。"
+        },
+        {
+          "role": "assistant",
+          "content": "狗狗為什麼不急著上傳社交媒體？因為牠知道，它的狗狗，已經能自己打卡。"
+        },
+        {
+          "role": "user",
+          "content": "笑點在哪裡？"
+        },
+        {
+          "role": "assistant",
+          "content": "狗狗可以自己打卡，把動物改成動物打卡，讓動物自己拍照。"
+        },
+        {
+          "role": "user",
+          "content": "保留剛才的笑點，改成一句話。"
+        },
+        {
+          "role": "assistant",
+          "content": "狗狗說：「今天我打卡，但你別把它當成狗。」"
+        }
+      ],
+      "human_notes": "待判讀"
+    },
+    {
+      "id": "heldout_umbrella",
+      "scope": "未參與訓練的雨傘主題",
+      "questions": [
+        "講一個關於雨傘的冷笑話。",
+        "笑點在哪裡？",
+        "保留剛才的笑點，改成一句話。"
+      ],
+      "messages": [
+        {
+          "role": "system",
+          "content": "你是冷笑話與諧音梗助手，請使用繁體中文回答。被追問時，請根據前文解釋或改寫。"
+        },
+        {
+          "role": "user",
+          "content": "講一個關於雨傘的冷笑話。"
+        },
+        {
+          "role": "assistant",
+          "content": "下雨天，朋友說：「今天不想下雨，就讓你穿雨傘吧。」我說：「別讓你去，先讓你穿雨傘。」"
+        },
+        {
+          "role": "user",
+          "content": "笑點在哪裡？"
+        },
+        {
+          "role": "assistant",
+          "content": "把雨天與讓別人穿雨傘聯想到下雨天，用字順序把字詞改換，形成新詞。"
+        },
+        {
+          "role": "user",
+          "content": "保留剛才的笑點，改成一句話。"
+        },
+        {
+          "role": "assistant",
+          "content": "我說：「別讓你穿雨傘，先讓你穿雨傘。」"
+        }
+      ],
+      "human_notes": "待判讀"
+    },
+    {
+      "id": "unseen_bus",
+      "scope": "教材外的新主題",
+      "questions": [
+        "講一個關於公車的冷笑話。",
+        "笑點在哪裡？",
+        "保留剛才的笑點，改成一句話。"
+      ],
+      "messages": [
+        {
+          "role": "system",
+          "content": "你是冷笑話與諧音梗助手，請使用繁體中文回答。被追問時，請根據前文解釋或改寫。"
+        },
+        {
+          "role": "user",
+          "content": "講一個關於公車的冷笑話。"
+        },
+        {
+          "role": "assistant",
+          "content": "公車上為什麼總不見個開車的？因為大家說車子太熱，讓座給它。"
+        },
+        {
+          "role": "user",
+          "content": "笑點在哪裡？"
+        },
+        {
+          "role": "assistant",
+          "content": "開車的字句原本指座位，把座位改成車子，把開車改成讓座，是說你不想排隊，就讓車子先來。"
+        },
+        {
+          "role": "user",
+          "content": "保留剛才的笑點，改成一句話。"
+        },
+        {
+          "role": "assistant",
+          "content": "公車上說：「別急，我先讓座，這座位就給你了。」是說它自己會開車，讓座給它。"
+        }
+      ],
+      "human_notes": "待判讀"
+    }
+  ]
+}

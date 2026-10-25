@@ -1,0 +1,11 @@
+{
+  "source": "experiments.jsonl",
+  "source_sha256": "5c051aa8a0a40104d0f9f046b9ca2c03755b98f309804b989034ac93c09a6a96",
+  "records": 14,
+  "repairs": [
+    {
+      "line": 3,
+      "change": "在該行末尾補上一個 }；不改輸入、回答或評語"
+    }
+  ]
+}

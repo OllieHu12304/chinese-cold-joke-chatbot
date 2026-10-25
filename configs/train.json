@@ -1,0 +1,17 @@
+{
+  "seed": 42,
+  "batch_size": 2,
+  "iters": 200,
+  "learning_rate": 0.0002,
+  "num_layers": 16,
+  "max_seq_length": 512,
+  "steps_per_report": 10,
+  "steps_per_eval": 40,
+  "save_every": 40,
+  "lora_parameters": {
+    "rank": 8,
+    "scale": 16.0,
+    "dropout": 0.05,
+    "keys": ["self_attn.q_proj", "self_attn.v_proj"]
+  }
+}

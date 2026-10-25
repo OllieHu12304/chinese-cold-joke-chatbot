@@ -1,0 +1,83 @@
+{
+  "seed": 42,
+  "source": "由 AI 撰寫並整理的合成對話，無外部抓取語料",
+  "splits": {
+    "train": {
+      "conversations": 40,
+      "samples": 118,
+      "source_ids": [
+        "example_conversation.json",
+        "ice_conversation.json",
+        "keyboard_conversation.json",
+        "上班",
+        "企鵝",
+        "印表機",
+        "圓規",
+        "手機",
+        "星星",
+        "時鐘",
+        "月亮",
+        "枕頭",
+        "柿子",
+        "梨子",
+        "棉被",
+        "棗子",
+        "樓梯",
+        "橘子",
+        "橡皮擦",
+        "熊",
+        "玉米",
+        "竹筍",
+        "羊",
+        "芋頭",
+        "蒜頭",
+        "蔥",
+        "蝦",
+        "螃蟹",
+        "豆腐",
+        "鉛筆",
+        "銀行",
+        "雞",
+        "雞蛋",
+        "零與八",
+        "電腦",
+        "香蕉",
+        "馬",
+        "魚",
+        "鴨",
+        "鹿"
+      ],
+      "max_tokens": 175,
+      "min_answer_tokens": 12,
+      "sha256": "d7da89e8d62b0b63a1077b287c84262073fcfdc0f66afb9e6f962f3035b35ca5"
+    },
+    "valid": {
+      "conversations": 5,
+      "samples": 15,
+      "source_ids": [
+        "桃子",
+        "滑鼠",
+        "蓮藕",
+        "豬",
+        "電梯"
+      ],
+      "max_tokens": 163,
+      "min_answer_tokens": 14,
+      "sha256": "f1ee590d8deab14f0ca2227efd48cfbb96ef94024af5d1defc91f07d13ca90db"
+    },
+    "test": {
+      "conversations": 5,
+      "samples": 15,
+      "source_ids": [
+        "書",
+        "烏龜",
+        "花生",
+        "蘑菇",
+        "雨傘"
+      ],
+      "max_tokens": 171,
+      "min_answer_tokens": 14,
+      "sha256": "22069619970218a05c13c0ee28c35fb4f63732568b440cf82ce30c05d9b9a3a8"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+# Python 虛擬環境：可重新安裝，不放進版本控制
+.venv/
+
+# Python 執行時產生的快取
+__pycache__/
+*.py[cod]
+
+# macOS 自動產生的檔案
+.DS_Store
+
+# 下載的基礎模型：體積大，之後記錄下載來源即可
+models/
+
+# 本機環境變數：可能包含存取憑證
+.env
+.env.*
+
+# 中途權重及試跑結果可重建；正式最佳 adapter 另外保留。
+output/checkpoints/
+output/smoke/
+output/debug_mask_boundary/
+results/*.log
+
+# 互動聊天可能包含個人訊息，不納入公開作品集。
+results/chat_sessions.jsonl
