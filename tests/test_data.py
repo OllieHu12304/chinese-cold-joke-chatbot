@@ -3,7 +3,7 @@ import json
 import unittest
 import numpy as np
 from transformers import AutoTokenizer
-from hw2_utils import ROOT, MODEL_PATH, answer_mask, encode_sample, read_jsonl, validate_messages
+from project_utils import ROOT, MODEL_PATH, answer_mask, encode_sample, read_jsonl, validate_messages
 
 
 class DataChecks(unittest.TestCase):

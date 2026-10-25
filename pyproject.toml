@@ -1,5 +1,5 @@
 [project]
-name = "nlp-hw2-cold-jokes"
+name = "chinese-cold-joke-chatbot"
 version = "0.1.0"
 description = "以 MLX QLoRA 微調繁體中文冷笑話與諧音梗對話模型"
 requires-python = ">=3.13,<3.14"

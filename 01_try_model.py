@@ -8,7 +8,7 @@ from importlib.metadata import version
 from pathlib import Path
 
 # 從本機資料夾載入模型權重與 tokenizer。
-# 這是相對路徑，因此執行時要位於 nlp_hw2 資料夾。
+# 使用相對路徑，執行時的工作目錄需為專案根目錄。
 # 此實驗使用 Qwen3-1.7B 的 MLX 4-bit 版本。
 model_path = "models/Qwen3-1.7B-4bit"
 model, tokenizer = load(model_path)

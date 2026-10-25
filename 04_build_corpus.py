@@ -3,7 +3,7 @@ import hashlib
 import json
 import random
 from transformers import AutoTokenizer
-from hw2_utils import ROOT, MODEL_PATH, SYSTEM, encode_sample, validate_messages, write_json
+from project_utils import ROOT, MODEL_PATH, SYSTEM, encode_sample, validate_messages, write_json
 
 
 def build():
@@ -11,7 +11,7 @@ def build():
     examples = []
     for name in ["example_conversation.json", "ice_conversation.json", "keyboard_conversation.json"]:
         row = json.loads((ROOT / "data" / name).read_text(encoding="utf-8"))
-        examples.append({"id": name, "kind": "既有教學範例", **row})
+        examples.append({"id": name, "kind": "基礎對話範例", **row})
 
     seeds_path = ROOT / "data/joke_seeds.json"
     seeds = json.loads(seeds_path.read_text(encoding="utf-8"))

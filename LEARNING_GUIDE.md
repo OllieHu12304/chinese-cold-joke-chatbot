@@ -6,8 +6,8 @@
 
 1. `03_prepare_data.py`：多檔讀取、角色檢查、前綴切分。
 2. `04_build_corpus.py`：先按整段對話切 train/valid/test，再展開前綴，避免資料洩漏。
-3. `hw2_utils.py` 的 `encode_sample()`：計算 prompt 長度，取得最後回答的起點。
-4. `hw2_utils.py` 的 `answer_loss()`：只計算答案，排除 prompt 與 padding。
+3. `project_utils.py` 的 `encode_sample()`：計算 prompt 長度，取得最後回答的起點。
+4. `project_utils.py` 的 `answer_loss()`：只計算答案，排除 prompt 與 padding。
 5. `configs/train.json` 與 `05_train.py`：模型凍結、LoRA、梯度更新、驗證與最佳權重。
 6. `06_evaluate.py`：teacher forcing 與自由多輪的差別。
 7. `07_chat.py`：保留模型自己生成的歷史，傳入下一輪。

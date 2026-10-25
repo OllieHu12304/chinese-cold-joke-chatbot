@@ -10,7 +10,7 @@ from mlx_lm import generate
 from mlx_lm.sample_utils import make_sampler
 from mlx_lm.tuner.datasets import CacheDataset
 from mlx_lm.tuner.trainer import evaluate
-from hw2_utils import (ROOT, SYSTEM, GENERATION, BEST_PATH, AnswerDataset,
+from project_utils import (ROOT, SYSTEM, GENERATION, BEST_PATH, AnswerDataset,
                        answer_loss, chat_prompt, load_chat_model, model_source, read_jsonl, write_json)
 
 

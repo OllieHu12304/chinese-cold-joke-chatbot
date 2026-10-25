@@ -6,7 +6,7 @@ from datetime import datetime
 import mlx.core as mx
 from mlx_lm import stream_generate
 from mlx_lm.sample_utils import make_sampler
-from hw2_utils import ROOT, SYSTEM, GENERATION, chat_prompt, load_chat_model
+from project_utils import ROOT, SYSTEM, GENERATION, chat_prompt, load_chat_model
 
 
 def main():

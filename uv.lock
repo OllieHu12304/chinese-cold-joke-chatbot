@@ -101,6 +101,23 @@ wheels = [
 ]
 
 [[package]]
+name = "chinese-cold-joke-chatbot"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "mlx" },
+    { name = "mlx-lm", extra = ["train"] },
+    { name = "transformers" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "mlx", specifier = "==0.32.4" },
+    { name = "mlx-lm", extras = ["train"], specifier = "==0.32.2" },
+    { name = "transformers", specifier = "==5.20.2" },
+]
+
+[[package]]
 name = "click"
 version = "8.5.0"
 source = { registry = "https://pypi.org/simple" }
@@ -471,23 +488,6 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/71/70/38998b950a97ea279e6bd657575d22d1a2047256caf707d9a10fbce4f065/multiprocess-0.70.19-py312-none-any.whl", hash = "sha256:3a56c0e85dd5025161bac5ce138dcac1e49174c7d8e74596537e729fd5c53c28", size = 150281, upload-time = "2026-01-19T06:47:35.037Z" },
     { url = "https://files.pythonhosted.org/packages/7f/74/d2c27e03cb84251dfe7249b8e82923643c6d48fa4883b9476b025e7dc7eb/multiprocess-0.70.19-py313-none-any.whl", hash = "sha256:8d5eb4ec5017ba2fab4e34a747c6d2c2b6fecfe9e7236e77988db91580ada952", size = 156414, upload-time = "2026-01-19T06:47:35.915Z" },
     { url = "https://files.pythonhosted.org/packages/7e/82/69e539c4c2027f1e1697e09aaa2449243085a0edf81ae2c6341e84d769b6/multiprocess-0.70.19-py39-none-any.whl", hash = "sha256:0d4b4397ed669d371c81dcd1ef33fd384a44d6c3de1bd0ca7ac06d837720d3c5", size = 133477, upload-time = "2026-01-19T06:47:38.619Z" },
-]
-
-[[package]]
-name = "nlp-hw2-cold-jokes"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "mlx" },
-    { name = "mlx-lm", extra = ["train"] },
-    { name = "transformers" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "mlx", specifier = "==0.32.4" },
-    { name = "mlx-lm", extras = ["train"], specifier = "==0.32.2" },
-    { name = "transformers", specifier = "==5.20.2" },
 ]
 
 [[package]]

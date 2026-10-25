@@ -13,7 +13,6 @@
 - 資料：繁體中文冷笑話、諧音梗與雙關的多輪合成對話。
 - 微調：凍結基礎權重，於注意力層加入 LoRA。
 - 推論：以歷史訊息串列傳遞上下文，支援串流輸出及歷史清除。
-- 題目背景：[自然語言處理課程作業二](https://github.com/telunyang/python_nlp#作業)。
 
 ## 模組職責
 
@@ -21,7 +20,7 @@
 |---|---|
 | 01–03 | 模型試用、單筆教材檢查與前綴切分範例 |
 | 04_build_corpus.py | 正式語料驗證、來源分組與 token 長度統計 |
-| hw2_utils.py | 共用路徑、模板、資料驗證及答案 loss 遮罩 |
+| project_utils.py | 共用路徑、模板、資料驗證及答案 loss 遮罩 |
 | 05_train.py | 短程檢查、QLoRA 訓練、指標紀錄及最佳 adapter 保存 |
 | 06_evaluate.py | 原始與微調模型比較、留出資料評估及自由多輪展示 |
 | 07_chat.py | 本機互動聊天、歷史管理與輸出紀錄 |
@@ -56,7 +55,7 @@
 
 ## 實驗結果
 
-完整設定與指標見 [README](../../../README.md)，
-原始輸出見 [實驗報告](../../../results/report.md)，
-內容品質分析見 [品質判讀](../../../results/quality_review.md)。
+完整設定與指標見 [README](../README.md)，
+原始輸出見 [實驗報告](../results/report.md)，
+內容品質分析見 [品質判讀](../results/quality_review.md)。
 目前 loss 雖下降，自由回答仍未達到穩定、合理的笑話生成品質。

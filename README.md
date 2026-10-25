@@ -3,9 +3,8 @@
 使用 Qwen3-1.7B 的 MLX 4-bit 版本，在 Apple M4 Pro 上以 QLoRA 微調多輪對話。
 本專案實作語料設計、分組切分、參數高效微調與生成品質評估，並保留可重現的設定及原始輸出。
 
-## 專案背景與模型來源
+## 模型與工具來源
 
-- [課程與作業二](https://github.com/telunyang/python_nlp#作業)：微調 Hugging Face 語言模型，建立笑話或情話專家，展示至少兩輪對話。
 - [原始模型 Qwen/Qwen3-1.7B](https://huggingface.co/Qwen/Qwen3-1.7B)。
 - [使用的 MLX 量化版本](https://huggingface.co/mlx-community/Qwen3-1.7B-4bit)。模型卡標示 Apache-2.0。
 - [MLX-LM 訓練工具](https://github.com/ml-explore/mlx-lm)。
@@ -45,7 +44,7 @@ uv run python 07_chat.py
 
 - `/reset` 清除對話歷史；`/exit` 結束。
 - `uv run python 07_chat.py --base` 比較未微調模型。
-- 程式會保存本機聊天原文至 `results/chat_sessions.jsonl`；勿在公開提交時包含私人對話。
+- 程式會保存本機聊天原文至 `results/chat_sessions.jsonl`；公開發布前應排除私人對話。
 - `messages` 傳遞前文，模型才有多輪上下文；這不是永久個人記憶。
 
 ## 語料
@@ -81,7 +80,7 @@ AI 合成教材可能含生硬笑點與不自然表達，品質仍需要人工�
 | 每幾步驗證 | 40 |
 
 只計算最後助手回答的交叉熵，遮罩 prompt 與 padding。
-`hw2_utils.py` 明確指定非思考模式；驗證 prompt 是完整 token 序列的前綴。
+`project_utils.py` 明確指定非思考模式；驗證 prompt 是完整 token 序列的前綴。
 本次額外使用半開區間遮罩，避免 MLX-LM 0.32.2 預設 loss 將第一個 padding 位置計入。
 這個邊界有單元測試，訓練與評估使用同一份 `answer_loss`。
 
@@ -149,9 +148,9 @@ uv run python 08_report.py
 | 06_evaluate.py | 公平基準比較與自由多輪展示 |
 | 07_chat.py | 本機互動聊天 |
 | 08_report.py | 將實際數值與回答產生為 Markdown |
-| hw2_utils.py | 共用路徑、資料驗證、token 遮罩與模型載入 |
+| project_utils.py | 共用路徑、資料驗證、token 遮罩與模型載入 |
 
-流程與原理說明見 [LEARNING_GUIDE.md](LEARNING_GUIDE.md)。
+流程與原理說明見 [LEARNING_GUIDE.md](LEARNING_GUIDE.md)，架構與驗證設計見 [docs/design.md](docs/design.md)。
 原始 `results/experiments.jsonl` 未覆寫；其中一行缺少結尾大括號，修復副本為
 `experiments_normalized.jsonl`，修復位置與原檔雜湊見 `history_repair.json`。
 

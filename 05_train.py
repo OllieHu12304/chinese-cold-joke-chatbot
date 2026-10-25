@@ -19,7 +19,7 @@ from mlx_lm.tuner.callbacks import TrainingCallback
 from mlx_lm.tuner.datasets import CacheDataset
 from mlx_lm.tuner.trainer import TrainingArgs, evaluate, train
 from mlx_lm.tuner.utils import linear_to_lora_layers, print_trainable_parameters
-from hw2_utils import ROOT, MODEL_PATH, AnswerDataset, answer_loss, model_source, read_jsonl, write_json
+from project_utils import ROOT, MODEL_PATH, AnswerDataset, answer_loss, model_source, read_jsonl, write_json
 
 
 class ExperimentLog(TrainingCallback):
